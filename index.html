@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.6.1/aframe-master.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.0.0/dist/aframe-physics-system.min.js"></script>-->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.11.4/dist/aframe-extras.min.js"></script>
+    <script src="map.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <a-scene fog="type: exponential; color: #ffd96d; density: 0.4">
+
+        <a-assets>
+            <img id="texture-floor" src="https://thumbs.dreamstime.com/b/sand-texture-13910133.jpg">
+        </a-assets>
+
+        <a-plane static-body>
+            <a-grid static-body rotation="-90 0 0"src="#texture-floor"></a-grid>
+        </a-plane>
+        
+        <a-sky color="#0fafff"></a-sky>
+        <a-light type="ambient" color="#ffd96d"></a-light>
+
+        <a-entity 
+            id="player"]
+            rotation="0 0 0"
+            position ="0 -0.5 0">
+            <a-camera
+                rotation="0 0 0"
+                universal-controls>
+            </a-camera>
+        </a-entity>
+    </a-scene>
+</body>
+</html>
